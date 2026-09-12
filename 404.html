@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada — Melao</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/logo/logo-melao-96.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/logo/icon-180.png">
+<meta name="theme-color" content="#1B1006">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,420;0,9..144,680&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* Relative paths here on purpose: unlike the flagship site, this variant
+     has no confirmed deployment path yet. If it ever ships on GitHub Pages
+     under a project subpath, switch these (and the ones above) to absolute
+     /repo-name/... paths the same way the flagship site's 404.html does —
+     otherwise a relative path resolves against the visitor's bogus URL
+     instead of the site root and quietly 404s a second time. */
+  body { display: flex; min-height: 100vh; background: var(--ink); }
+  .notfound { margin: auto; max-width: 32rem; padding: 3rem 1.5rem; text-align: center; }
+  .notfound-mark { width: 56px; height: 56px; margin: 0 auto 1.75rem; border-radius: 50%; }
+  .notfound-code { font-family: var(--serif); font-size: 0.95rem; font-weight: 600; color: var(--ink-faint); letter-spacing: 0.08em; }
+  .notfound h1 { margin-top: 0.75rem; font-family: var(--serif); font-size: clamp(1.9rem, 5vw, 2.8rem); font-weight: 560; line-height: 1.15; color: var(--paper); }
+  .notfound p { margin-top: 1.1rem; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.6; }
+  .notfound-actions { margin-top: 2.25rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+  <main class="notfound">
+    <img class="notfound-mark" src="assets/img/logo/logo-melao-96.png" alt="" width="56" height="56">
+    <p class="notfound-code">Error 404</p>
+    <h1>Esto no estaba en la carta.</h1>
+    <p>La página que buscas no existe o se ha movido. Prueba a volver al inicio, o pásate directamente por la carta.</p>
+    <div class="notfound-actions">
+      <a class="btn btn-primary" href="./"><span>Volver al inicio</span></a>
+      <a class="btn btn-ghost" href="./#carta"><span>Ver la carta</span></a>
+    </div>
+  </main>
+</body>
+</html>
