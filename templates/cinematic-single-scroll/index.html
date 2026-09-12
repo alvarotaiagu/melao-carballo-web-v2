@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melao — Carballo (plantilla: cinematic single-scroll)</title>
+<meta name="description" content="Plantilla estructural alternativa para el sitio de Melao: una historia continua en scroll, con galería horizontal de platos y carta en acordeón.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/img/logo/logo-melao-96.png" type="image/png">
+<meta name="theme-color" content="#171308">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,380;0,9..144,460;0,9..144,600;0,9..144,760;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Ir al contenido</a>
+
+<!-- Navigation pattern: a slim fixed side rail of section dots, not a
+     hamburger overlay — this variant is one continuous scroll, so the
+     nav's job is "where am I", not "jump to a page". -->
+<nav class="rail" aria-label="Secciones de la página">
+  <a class="rail-brand" href="#hero" aria-label="Melao, ir al inicio">
+    <img src="../../assets/img/logo/logo-melao-96.png" alt="" width="28" height="28">
+  </a>
+  <ol class="rail-dots">
+    <li><a href="#historia" data-rail-link><span class="rail-dot" aria-hidden="true"></span><span class="rail-label">Historia</span></a></li>
+    <li><a href="#galeria" data-rail-link><span class="rail-dot" aria-hidden="true"></span><span class="rail-label">Galería</span></a></li>
+    <li><a href="#carta" data-rail-link><span class="rail-dot" aria-hidden="true"></span><span class="rail-label">Carta</span></a></li>
+    <li><a href="#voces" data-rail-link><span class="rail-dot" aria-hidden="true"></span><span class="rail-label">Voces</span></a></li>
+    <li><a href="#visitanos" data-rail-link><span class="rail-dot" aria-hidden="true"></span><span class="rail-label">Visítanos</span></a></li>
+  </ol>
+  <a class="rail-ig" href="https://www.instagram.com/melaocarballo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Melao (se abre en una pestaña nueva)">
+    <iconify-icon icon="mdi:instagram" aria-hidden="true"></iconify-icon>
+  </a>
+</nav>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="hero">
+    <div class="hero-media" aria-hidden="true">
+      <span class="lqip" style="background-image:url('../../assets/img/web/dish-hero-lqip.jpg')"></span>
+      <img src="../../assets/img/web/dish-hero-900.jpg"
+           srcset="../../assets/img/web/dish-hero-900.jpg 900w, ../../assets/img/web/dish-hero-1600.jpg 1600w"
+           sizes="100vw" alt="" fetchpriority="high" decoding="async">
+      <div class="hero-scrim"></div>
+    </div>
+    <div class="hero-copy">
+      <p class="hero-kicker">Carballo · desde 2023</p>
+      <h1 class="hero-word">Melao</h1>
+      <p class="hero-sub">Brunch de día. Pinsa y cóctel de noche. Un mismo local, una sola historia — despláz&shy;ate para conocerla.</p>
+    </div>
+    <a class="hero-scrollcue" href="#historia" aria-label="Bajar a la historia de Melao">
+      <span class="hero-scrollcue-line" aria-hidden="true"></span>
+      <span>Desliza</span>
+    </a>
+  </section>
+
+  <!-- ============ HISTORIA: big-type editorial timeline ============ -->
+  <section id="historia" class="historia">
+    <div class="historia-inner">
+
+      <article class="story-beat" data-reveal>
+        <p class="story-year">2023</p>
+        <h2 class="story-line"><span>Un nombre</span><span>prestado del</span><span>cariño.</span></h2>
+        <p class="story-text">En Venezuela, «melao» es como le dices a alguien que quieres. Cuando abrimos
+          en Avenida Ponte da Pedra, en Carballo, nos pareció la única palabra posible: quisimos que este
+          fuera, sobre todo, un sitio querido.</p>
+      </article>
+
+      <article class="story-beat" data-reveal>
+        <p class="story-year">De día</p>
+        <h2 class="story-line"><span>Brunch</span><span>tranquilo,</span><span>con niños</span><span>jugando.</span></h2>
+        <p class="story-text">Jueves a domingo por la mañana somos sitio de tostadas, pancakes y huevos
+          benedictinos. Hay juegos de mesa en sala — el plan es quedarse sin prisa.</p>
+      </article>
+
+      <article class="story-beat" data-reveal>
+        <p class="story-year">De noche</p>
+        <h2 class="story-line"><span>La plancha</span><span>se enciende,</span><span>sale la</span><span>barra.</span></h2>
+        <p class="story-text">De viernes a domingo, en cuanto cae la tarde, el horno saca pinsa romana, la
+          plancha sirve smash burgers y la barra pone cócteles. Mismo local, otra vida.</p>
+      </article>
+
+      <article class="story-beat" data-reveal>
+        <p class="story-year">Hoy</p>
+        <h2 class="story-line"><span>Tres cocinas,</span><span>una sola</span><span>carta.</span></h2>
+        <p class="story-text">Fusión venezolana, romana y de casa, sin cambiar de dirección ni de dueños.
+          Pet friendly, accesible, y siempre con algo para llevar.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA: horizontal scroll-snap gallery ============ -->
+  <section id="galeria" class="galeria">
+    <div class="galeria-head" data-reveal>
+      <p class="eyebrow">De cocina</p>
+      <h2>Lo que sale de la plancha y del horno.</h2>
+    </div>
+
+    <div class="galeria-scroller-wrap">
+      <button type="button" class="galeria-arrow galeria-arrow--prev" data-galeria-prev aria-label="Platos anteriores">
+        <iconify-icon icon="solar:alt-arrow-left-linear" aria-hidden="true"></iconify-icon>
+      </button>
+
+      <ul class="galeria-scroller" data-galeria-track tabindex="0" aria-label="Galería de platos, desliza para ver más">
+        <li class="galeria-slide">
+          <img src="../../assets/img/web/cocina-pancakes-barra-900.jpg" srcset="../../assets/img/web/cocina-pancakes-barra-500.jpg 500w, ../../assets/img/web/cocina-pancakes-barra-900.jpg 900w" sizes="(max-width:640px) 82vw, 420px" alt="Dos platos de pancakes servidos en la barra de Melao" loading="lazy" decoding="async">
+          <p><span class="galeria-badge galeria-badge--dia">De día</span>Pancakes en la barra</p>
+        </li>
+        <li class="galeria-slide">
+          <img src="../../assets/img/web/cocina-pancake-choco-900.jpg" srcset="../../assets/img/web/cocina-pancake-choco-500.jpg 500w, ../../assets/img/web/cocina-pancake-choco-900.jpg 900w" sizes="(max-width:640px) 82vw, 420px" alt="Pancake bañado en chocolate y azúcar glas" loading="lazy" decoding="async">
+          <p><span class="galeria-badge galeria-badge--dia">De día</span>Pancake de chocolate</p>
+        </li>
+        <li class="galeria-slide">
+          <img src="../../assets/img/web/cocina-tosta-platano-900.jpg" srcset="../../assets/img/web/cocina-tosta-platano-500.jpg 500w, ../../assets/img/web/cocina-tosta-platano-900.jpg 900w" sizes="(max-width:640px) 82vw, 420px" alt="Tostada con crema de cacahuete y plátano" loading="lazy" decoding="async">
+          <p><span class="galeria-badge galeria-badge--dia">De día</span>Tostada de plátano</p>
+        </li>
+        <li class="galeria-slide">
+          <img src="../../assets/img/web/cocina-bowl-granola-900.jpg" srcset="../../assets/img/web/cocina-bowl-granola-500.jpg 500w, ../../assets/img/web/cocina-bowl-granola-900.jpg 900w" sizes="(max-width:640px) 82vw, 420px" alt="Bowl de yogur con granola, fresas, plátano y chía" loading="lazy" decoding="async">
+          <p><span class="galeria-badge galeria-badge--dia">De día</span>Bowl de granola</p>
+        </li>
+        <li class="galeria-slide">
+          <img src="../../assets/img/web/cocina-burger-bacon-900.jpg" srcset="../../assets/img/web/cocina-burger-bacon-500.jpg 500w, ../../assets/img/web/cocina-burger-bacon-900.jpg 900w" sizes="(max-width:640px) 82vw, 420px" alt="Smash burger con bacon, cheddar y cebolla" loading="lazy" decoding="async">
+          <p><span class="galeria-badge galeria-badge--noche">De noche</span>Smash de bacon y cheddar</p>
+        </li>
+        <li class="galeria-slide">
+          <img src="../../assets/img/web/cocina-tosta-burrata-900.jpg" srcset="../../assets/img/web/cocina-tosta-burrata-500.jpg 500w, ../../assets/img/web/cocina-tosta-burrata-900.jpg 900w" sizes="(max-width:640px) 82vw, 420px" alt="Tosta de burrata con huevo poché y virutas de jamón crujiente" loading="lazy" decoding="async">
+          <p><span class="galeria-badge galeria-badge--noche">De noche</span>Tosta de burrata</p>
+        </li>
+        <li class="galeria-slide">
+          <img src="../../assets/img/web/cocina-coctel-rosa-900.jpg" srcset="../../assets/img/web/cocina-coctel-rosa-500.jpg 500w, ../../assets/img/web/cocina-coctel-rosa-900.jpg 900w" sizes="(max-width:640px) 82vw, 420px" alt="Cóctel rosa con guinda y borde escarchado" loading="lazy" decoding="async">
+          <p><span class="galeria-badge galeria-badge--noche">De noche</span>Cóctel de la casa</p>
+        </li>
+        <li class="galeria-slide">
+          <img src="../../assets/img/web/cocina-tarta-sala-900.jpg" srcset="../../assets/img/web/cocina-tarta-sala-500.jpg 500w, ../../assets/img/web/cocina-tarta-sala-900.jpg 900w" sizes="(max-width:640px) 82vw, 420px" alt="Tarta de frutos rojos sobre la mesa, con la sala de Melao al fondo" loading="lazy" decoding="async">
+          <p><span class="galeria-badge galeria-badge--noche">De noche</span>Tarta de frutos rojos</p>
+        </li>
+      </ul>
+
+      <button type="button" class="galeria-arrow galeria-arrow--next" data-galeria-next aria-label="Siguientes platos">
+        <iconify-icon icon="solar:alt-arrow-right-linear" aria-hidden="true"></iconify-icon>
+      </button>
+    </div>
+
+    <a class="galeria-cta" href="https://www.instagram.com/melaocarballo/" target="_blank" rel="noopener noreferrer">
+      <span>Ver más platos en Instagram</span>
+      <iconify-icon icon="solar:arrow-right-up-linear" aria-hidden="true"></iconify-icon>
+    </a>
+  </section>
+
+  <!-- ============ CARTA: accordion grouped by category ============ -->
+  <section id="carta" class="carta">
+    <div class="carta-inner">
+      <div data-reveal>
+        <p class="eyebrow">La carta</p>
+        <h2>Un aperitivo de lo que hay.</h2>
+        <p class="carta-lead">La carta completa está en el local y en Instagram. Precios de referencia; pueden variar.</p>
+      </div>
+
+      <div class="accordion" data-accordion>
+
+        <div class="accordion-item">
+          <h3>
+            <button type="button" class="accordion-trigger" aria-expanded="true" aria-controls="panel-dia" id="acc-dia">
+              <span class="accordion-trigger-label"><iconify-icon icon="solar:sunrise-bold" aria-hidden="true"></iconify-icon>Desayuno y brunch</span>
+              <span class="accordion-trigger-meta">Jue–dom · 9:00–13:30</span>
+              <iconify-icon class="accordion-chevron" icon="solar:alt-arrow-down-linear" aria-hidden="true"></iconify-icon>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="panel-dia" role="region" aria-labelledby="acc-dia">
+            <div class="accordion-panel-inner">
+              <ul class="dish-list">
+                <li><span class="dish-name">Tostadas saladas o dulces<small>Pan del día, aceite y tomate o mermelada casera.</small></span><span class="price">desde 1,80 €</span></li>
+                <li><span class="dish-name">Pancakes<small>Torre clásica, sirope a elegir.</small></span><span class="price">2,50 €</span></li>
+                <li><span class="dish-name">Huevos benedictinos<small>Sobre tostada, con salsa holandesa.</small></span><span class="price">6,50 €</span></li>
+                <li><span class="dish-name">Bowl de yogur y granola<small>Yogur griego, granola casera y fruta.</small></span><span class="price">4,20 €</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="panel-noche" id="acc-noche">
+              <span class="accordion-trigger-label"><iconify-icon icon="solar:moon-stars-bold" aria-hidden="true"></iconify-icon>Pinsa, smash y cóctel</span>
+              <span class="accordion-trigger-meta">Vie–dom · 20:00–00:00</span>
+              <iconify-icon class="accordion-chevron" icon="solar:alt-arrow-down-linear" aria-hidden="true"></iconify-icon>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="panel-noche" role="region" aria-labelledby="acc-noche" hidden>
+            <div class="accordion-panel-inner">
+              <ul class="dish-list">
+                <li><span class="dish-name">Tequeños<small>Salsa a elegir, para compartir.</small></span><span class="price">5,50 €</span></li>
+                <li><span class="dish-name">Melao — hamburguesa<small>Doble carne, bacon y cheddar.</small></span><span class="price">12,50 €</span></li>
+                <li><span class="dish-name">Pinsa bianca cabra<small>Cebolla caramelizada, queso de cabra.</small></span><span class="price">13,00 €</span></li>
+                <li><span class="dish-name">Nachos pulled pork<small>Con guacamole, para compartir.</small></span><span class="price">7,50 €</span></li>
+                <li><span class="dish-name">Pinsa barbacoa<small>Pollo y mozzarella.</small></span><span class="price">12,00 €</span></li>
+                <li><span class="dish-name">Smash pulled pork<small>Cebolla crujiente.</small></span><span class="price">10,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3>
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="panel-siempre" id="acc-siempre">
+              <span class="accordion-trigger-label"><iconify-icon icon="solar:clock-circle-linear" aria-hidden="true"></iconify-icon>Todo el día</span>
+              <span class="accordion-trigger-meta">Postres y café</span>
+              <iconify-icon class="accordion-chevron" icon="solar:alt-arrow-down-linear" aria-hidden="true"></iconify-icon>
+            </button>
+          </h3>
+          <div class="accordion-panel" id="panel-siempre" role="region" aria-labelledby="acc-siempre" hidden>
+            <div class="accordion-panel-inner">
+              <ul class="dish-list">
+                <li><span class="dish-name">Cheesecake / red velvet / carrot cake</span><span class="price">3,50 €</span></li>
+                <li><span class="dish-name">Tarta del día</span><span class="price">4,00 €</span></li>
+                <li><span class="dish-name">Affogato</span><span class="price">4,00 €</span></li>
+                <li><span class="dish-name">Capuchino</span><span class="price">1,80 €</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VOCES: reviews as a stacked reveal, not a carousel ============ -->
+  <section id="voces" class="voces">
+    <div class="voces-inner">
+      <p class="eyebrow" data-reveal>Reseñas reales</p>
+      <ul class="voces-list">
+        <li data-reveal>
+          <p>&ldquo;Sin duda un sitio genial para ir a disfrutar con amigos y familia. Mucha variedad de
+            desayunos y cenas y todo a un precio súper bueno. No os imagináis cuantas veces hemos venido
+            desde Coruña. Es una pasada y los dueños y empleados geniales.&rdquo;</p>
+          <footer><strong>Rodrigo S.</strong><span class="stars" aria-label="5 de 5 estrellas">★★★★★</span></footer>
+        </li>
+        <li data-reveal>
+          <p>&ldquo;Buen trato, buen ambiente y en esta ocasión el desayuno buenísimo.&rdquo;</p>
+          <footer><strong>Yolanda R.</strong><span class="stars" aria-label="5 de 5 estrellas">★★★★★</span></footer>
+        </li>
+        <li data-reveal>
+          <p>&ldquo;Excelente lugar para desayunar e ir con los peques, ya que allí tienen algunos juegos de
+            mesa. Las tortitas están de lujo, el café riquísimo y la atención muy rápida. Aconsejable
+            reservar, está siempre lleno, y no me extraña, está todo riquísimo!&rdquo;</p>
+          <footer><strong>Paty P.</strong><span class="stars" aria-label="5 de 5 estrellas">★★★★★</span></footer>
+        </li>
+      </ul>
+      <a class="btn btn-ghost" href="https://share.google/bW9lgUvX52iownn9A" target="_blank" rel="noopener noreferrer" data-reveal>
+        <iconify-icon icon="logos:google-icon" aria-hidden="true"></iconify-icon>
+        <span>4,8★ en Google — ver todas las reseñas</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ VISÍTANOS ============ -->
+  <section id="visitanos" class="visitanos">
+    <div class="visitanos-inner">
+      <div data-reveal>
+        <p class="eyebrow">Encuéntranos</p>
+        <h2>Te guardamos sitio.</h2>
+
+        <div class="hours-status-row">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span id="hours-status-text">Comprobando horario…</span>
+        </div>
+        <ul id="hours-list" class="hours-list">
+          <li data-day="1"><span>Lunes</span><span>Cerrado</span></li>
+          <li data-day="2"><span>Martes</span><span>Cerrado</span></li>
+          <li data-day="3"><span>Miércoles</span><span>Cerrado</span></li>
+          <li data-day="4"><span>Jueves</span><span>9:00–13:30</span></li>
+          <li data-day="5"><span>Viernes</span><span>9:00–13:30 · 20:00–0:00</span></li>
+          <li data-day="6"><span>Sábado</span><span>9:00–13:30 · 20:00–0:00</span></li>
+          <li data-day="0"><span>Domingo</span><span>10:00–14:00 · 20:00–23:30</span></li>
+        </ul>
+
+        <ul class="info-list">
+          <li>
+            <iconify-icon icon="solar:map-point-linear" aria-hidden="true"></iconify-icon>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Melao%2C%20Avenida%20Ponte%20da%20Pedra%2018%2C%2015100%20Carballo" target="_blank" rel="noopener noreferrer">Avenida Ponte da Pedra, 18 · Carballo</a>
+          </li>
+          <li>
+            <iconify-icon icon="solar:phone-linear" aria-hidden="true"></iconify-icon>
+            <span><a href="tel:+34604057796">604 057 796</a> <span aria-hidden="true">·</span> <a href="tel:+34697114470">697 11 44 70</a></span>
+          </li>
+          <li>
+            <iconify-icon icon="mdi:paw" aria-hidden="true"></iconify-icon>
+            <span>Pet friendly · accesible · para llevar</span>
+          </li>
+        </ul>
+
+        <button type="button" class="map-consent" data-map-title="Mapa de ubicación de Melao en Carballo" data-map-src="https://www.google.com/maps?q=Melao%2C%20Avenida%20Ponte%20da%20Pedra%2018%2C%2015100%20Carballo&amp;output=embed">
+          <iconify-icon icon="solar:map-point-wave-linear" aria-hidden="true"></iconify-icon>
+          <span>Cargar el mapa</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a class="brand" href="#hero">
+      <img src="../../assets/img/logo/logo-melao-96.png" alt="" width="24" height="24">
+      <span>Melao</span>
+    </a>
+    <p>© <span id="footer-year">2026</span> Melao · Avenida Ponte da Pedra, 18 · Carballo</p>
+    <a href="mailto:melaocarballo@gmail.com">melaocarballo@gmail.com</a>
+  </div>
+</footer>
+
+<!-- Sticky bottom CTA bar: hidden until the hero has been scrolled past,
+     unlike the flagship site's floating WhatsApp FAB this is a full-width
+     bar with two actions (call, reserve). -->
+<div class="cta-bar" data-cta-bar hidden>
+  <p class="cta-bar-text"><strong>Melao</strong> · Avenida Ponte da Pedra, 18</p>
+  <div class="cta-bar-actions">
+    <a class="cta-bar-btn cta-bar-btn--ghost" href="tel:+34604057796">
+      <iconify-icon icon="solar:phone-linear" aria-hidden="true"></iconify-icon><span>Llamar</span>
+    </a>
+    <a class="cta-bar-btn cta-bar-btn--solid" href="https://wa.me/34604057796?text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20reservar%20mesa%20en%20Melao%20%F0%9F%99%82" target="_blank" rel="noopener noreferrer">
+      <iconify-icon icon="ri:whatsapp-fill" aria-hidden="true"></iconify-icon><span>Reservar</span>
+    </a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
